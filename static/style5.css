@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    background-image: url("img/currencyconv.jpg");
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    margin-top: 100px;
+    padding: 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 255, 0.2) 0px 7px 29px 0px;
+}
+
+.header-img {
+    text-align: center;
+    width: 70px;
+}
+
+.converter-container {
+    margin-top: 30px;
+}
+
+.main button {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.main button:hover {
+    background-color: rgb(30,144,255);
+}
+
+button img {
+    margin-bottom: -5px;
+    width: 30px;
+}
+
+.convert-to, .convert-from {
+    border: 1px solid rgb(144, 143, 143);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input, select {
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+    background-color: transparent;
+    width: 240px;
+}
+
+select {
+    text-align: center;
+}
+
+.exchange-rate {
+    margin-top: 20px;
+}
