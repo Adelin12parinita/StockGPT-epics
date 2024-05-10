@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Currency Converter</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='style5.css') }}">
+
+</head>
+<body>
+
+    <div class="main">
+
+        <img class="header-img" src="https://cdn-icons-png.flaticon.com/512/2601/2601491.png" alt="">
+        <h1>Real-Time Currency Converter</h1>
+
+        <div class="converter-container">
+
+            <div class="convert-from">
+                <input type="number" id="amountFrom">|
+                <select id="convertFrom">
+                    <option value="">-select-</option>
+                </select>
+            </div>
+
+            <button class="swap-currency">
+                <img src="https://cdn-icons-png.flaticon.com/512/2048/2048804.png" alt="">
+            </button>
+        
+            <div class="convert-to">
+                <input type="number" id="amountTo" readonly>|
+                <select id="convertTo">
+                    <option value="">-select-</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="exchange-rate">
+
+            <p>Exchange Rate:</p>
+            <p id="exchangeRate"></p>
+
+        </div>
+
+    </div>
+    
+    
+    <!-- Script JS -->
+    <script type="text/javascript" src="{{url_for('static', filename='script5.js')}}"></script>
+</body>
+</html>

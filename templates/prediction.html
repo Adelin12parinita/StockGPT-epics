@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StockGPT</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Favicons -->
+<link rel="shortcut icon" sizes="16x16" href="{{ url_for('static', filename='logo.png') }}"/>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='bootstrap.css') }}">
+
+<!-- Fonts -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font-awesome.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='simple-line-icons.css') }}" media="screen" />
+<link rel="stylesheet" href="{{ url_for('static', filename='et-line-font.css') }}">
+
+<!-- MENU CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='menuzord.css') }}">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='style3.css') }}">
+
+<!-- Responsive -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='responsive.css') }}">
+
+<!-- Animate.min -->
+<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='animate.min.css') }}">
+</head>
+
+<body>
+
+<!--preloader start-->
+
+<!--preloader end--> 
+
+<!-- Login  -->
+<div class="login_page login_solid_bg">
+  <div class="container">
+    <div class="log_in_logo text-center"> <img style="height: 150px" src="{{url_for('static', filename='tile7.png')}}" </div>
+    <div class="log_in_box">
+      <form class="login" action = "{{ url_for('insertintotable') }}" method = "POST">
+        <div class="login_title">
+          <h2>PLEASE ENTER A STOCK SYMBOL</h2>{% if not_found %}
+          <div class="alert alert-danger" style="color: red;" role="alert">
+  Stock Symbol (Ticker) Not Found. Please Enter a Valid Stock Symbol
+</div>
+          {% endif %}
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name = "nm" placeholder="Company Stock Symbol">
+
+        </div>
+        <div class="form-group">
+          
+        </div>
+        <div class="form-group">
+          <button class="btn btn-login">PREDICT THE FUTURE</button>
+          <p>Can't find Stock Symbol? <a href="https://drive.google.com/file/d/17w4obPdlPxE82duXYem8jxdYJKLhKI7b/view?usp=sharing" target="_blank">Click here!</a></p>
+        </div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+<!-- End Lgin  --> 
+
+<!-- Demo Heading -->
+
+<div class="main-area top-download text-center ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p class="top-btn-text"> </p>
+      </div>
+      <div class="col-md-4 btn-ma"> </div>
+    </div>
+  </div>
+</div>
+
+<!-- END Demo Heading --> 
+
+<!-- Back to Top --> 
+<a href="#" id="back-to-top" title="Back to top"><img src="{{url_for('static', filename='top-arrow.png')}}"</a> 
+
+<!-- js file  --> 
+<script type="text/javascript" src="{{url_for('static', filename='jquery.min.js')}}"></script> 
+
+<!-- Bootstrap JS  --> 
+<script type="text/javascript" src="{{url_for('static', filename='bootstrap.js')}}"></script> 
+
+<!-- Menu JS  --> 
+<script type="text/javascript" src="{{url_for('static', filename='menuzord.js')}}"></script> 
+
+<!-- main js --> 
+<script type="text/javascript" src="{{url_for('static', filename='main.js')}}"></script>
+</body>
+</html>
